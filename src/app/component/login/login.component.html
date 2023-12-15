@@ -1,0 +1,77 @@
+<div class="container-fluid bg-dark vh-100">
+  <form class="container bg-dark px-5 py-2 w-50 rounded-2 shadd">
+    <div class="text">
+      <h1 class="text-white fw-bolder fs-1 text-center">You are Welcome</h1>
+    </div>
+    <br />
+    <br />
+    <div class="form-group row">
+      <label
+        for="staticEmail"
+        class="col-sm-2 col-form-label text-white text-shadow-2 fw-bold"
+        >Email</label
+      >
+      <div class="col-sm-10 position-relative d-flex">
+        <input
+          type="email"
+          class="form-control"
+          id="staticEmail"
+          value="email@example.com"
+          [(ngModel)]="email"
+        />
+      </div>
+    </div>
+    <br />
+
+    <div class="form-group row">
+      <label
+        for="inputPassword"
+        class="col-sm-2 col-form-label text-white fw-bold"
+        >Password</label
+      >
+      <div class="col-sm-10 position-relative">
+        <input
+          type="password"
+          class="form-control"
+          id="inputPassword"
+          placeholder="Password"
+          [(ngModel)]="password"
+        />
+      </div>
+    </div>
+    <br />
+    <div class="form-group d-flex justify-content-between">
+      <div>
+        <a href="/forgetpassword" class="fw-bold"
+          ><small>Forget Password</small></a
+        >
+      </div>
+      <div class="mmm d-flex align-items-center">
+        <small class="fw-bold text-white">Don't have an account?</small>
+        <a href="/register" class="fs-5 fw-bold text-info"
+          ><small> Get started</small></a
+        >
+      </div>
+    </div>
+    <br />
+    <div class="form-group row d-flex justify-content-center">
+      <input
+        type="submit"
+        class="text-dark bg-white d-block w-25 fs-3 fw-bolder rounded-1 border-0"
+        value="Login"
+        (click)="login()"
+      />
+    </div>
+    <div class="my-2 d-flex justify-content-center bg-white">
+      <div class=" d-flex align-items-center">
+        <fa-icon class="bg-dark text-white mr-2" [icon]="faGoogle"></fa-icon>
+        <input
+          type="submit"
+          class="text-white bg-dark border-0 fs-6 fw-bold outline-0"
+          value="Sign In with Google"
+          (click)="signInWithGoogle"
+        />
+      </div>
+    </div>
+  </form>
+</div>
